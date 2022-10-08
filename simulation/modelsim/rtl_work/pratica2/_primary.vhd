@@ -18,6 +18,7 @@ entity pratica2 is
         ld              : vl_logic_vector(0 to 2) := (Hi1, Hi0, Hi0);
         st              : vl_logic_vector(0 to 2) := (Hi1, Hi0, Hi1);
         \And\           : vl_logic_vector(0 to 2) := (Hi1, Hi1, Hi0);
+        shift_rot       : vl_logic_vector(0 to 2) := (Hi1, Hi1, Hi1);
         R0              : vl_logic_vector(0 to 3) := (Hi0, Hi0, Hi0, Hi0);
         R1              : vl_logic_vector(0 to 3) := (Hi0, Hi0, Hi0, Hi1);
         R2              : vl_logic_vector(0 to 3) := (Hi0, Hi0, Hi1, Hi0);
@@ -54,6 +55,7 @@ entity pratica2 is
     attribute mti_svvh_generic_type of ld : constant is 1;
     attribute mti_svvh_generic_type of st : constant is 1;
     attribute mti_svvh_generic_type of \And\ : constant is 1;
+    attribute mti_svvh_generic_type of shift_rot : constant is 1;
     attribute mti_svvh_generic_type of R0 : constant is 1;
     attribute mti_svvh_generic_type of R1 : constant is 1;
     attribute mti_svvh_generic_type of R2 : constant is 1;

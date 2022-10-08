@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pratica2
-Fri Oct 07 16:07:55 2022
+Sat Oct 08 00:53:53 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -24,12 +24,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  16. Parameter Settings for User Entity Instance: Top-level Entity: |pratica2
  17. Parameter Settings for User Entity Instance: ram:memDados|altsyncram:altsyncram_component
  18. Parameter Settings for User Entity Instance: rom:memInst|altsyncram:altsyncram_component
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Port Connectivity Checks: "rom:memInst"
- 21. Port Connectivity Checks: "ram:memDados"
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
- 24. Analysis & Synthesis Suppressed Messages
+ 19. Parameter Settings for User Entity Instance: barrel:barrelShifter
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "rom:memInst"
+ 22. Port Connectivity Checks: "ram:memDados"
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+ 25. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -55,13 +56,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 07 16:07:55 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 08 00:53:53 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; pratica2                                        ;
 ; Top-level Entity Name              ; pratica2                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 456                                             ;
-;     Total combinational functions  ; 302                                             ;
+; Total logic elements               ; 675                                             ;
+;     Total combinational functions  ; 521                                             ;
 ;     Dedicated logic registers      ; 208                                             ;
 ; Total registers                    ; 208                                             ;
 ; Total pins                         ; 4                                               ;
@@ -197,16 +198,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 456   ;
+; Estimated Total logic elements              ; 675   ;
 ;                                             ;       ;
-; Total combinational functions               ; 302   ;
+; Total combinational functions               ; 521   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 199   ;
-;     -- 3 input functions                    ; 73    ;
-;     -- <=2 input functions                  ; 30    ;
+;     -- 4 input functions                    ; 346   ;
+;     -- 3 input functions                    ; 134   ;
+;     -- <=2 input functions                  ; 41    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 257   ;
+;     -- normal mode                          ; 476   ;
 ;     -- arithmetic mode                      ; 45    ;
 ;                                             ;       ;
 ; Total registers                             ; 208   ;
@@ -218,8 +219,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; Clock ;
 ; Maximum fan-out                             ; 240   ;
-; Total fan-out                               ; 2017  ;
-; Average fan-out                             ; 3.69  ;
+; Total fan-out                               ; 2994  ;
+; Average fan-out                             ; 3.91  ;
 +---------------------------------------------+-------+
 
 
@@ -228,10 +229,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                   ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
-; |pratica2                                 ; 302 (183)         ; 208 (6)      ; 4608        ; 0            ; 0       ; 0         ; 4    ; 0            ; |pratica2                                                                             ; work         ;
-;    |F:F_1|                                ; 6 (6)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|F:F_1                                                                       ; work         ;
-;    |ULAn:ula|                             ; 81 (81)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|ULAn:ula                                                                    ; work         ;
+; |pratica2                                 ; 521 (174)         ; 208 (6)      ; 4608        ; 0            ; 0       ; 0         ; 4    ; 0            ; |pratica2                                                                             ; work         ;
+;    |F:F_1|                                ; 8 (8)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|F:F_1                                                                       ; work         ;
+;    |ULAn:ula|                             ; 130 (130)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|ULAn:ula                                                                    ; work         ;
 ;    |W:wren|                               ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|W:wren                                                                      ; work         ;
+;    |barrel:barrelShifter|                 ; 177 (177)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|barrel:barrelShifter                                                        ; work         ;
 ;    |dec3to8:decX|                         ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|dec3to8:decX                                                                ; work         ;
 ;    |programCounter:PC_1|                  ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|programCounter:PC_1                                                         ; work         ;
 ;    |ram:memDados|                         ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|ram:memDados                                                                ; work         ;
@@ -286,26 +288,12 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; ULAn:ula|result[0]                                  ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[1]                                  ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[2]                                  ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[3]                                  ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[4]                                  ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[5]                                  ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[6]                                  ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[7]                                  ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[8]                                  ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[9]                                  ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[10]                                 ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[11]                                 ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[12]                                 ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[13]                                 ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[14]                                 ; ULAn:ula|result[15] ; yes                    ;
-; ULAn:ula|result[15]                                 ; ULAn:ula|result[15] ; yes                    ;
-; Select[1]                                           ; Selector1           ; yes                    ;
 ; Select[3]                                           ; Selector1           ; yes                    ;
+; Select[1]                                           ; Selector1           ; yes                    ;
 ; Select[0]                                           ; Selector1           ; yes                    ;
 ; Select[2]                                           ; Selector1           ; yes                    ;
+; ALU_op[1]                                           ; ALU_op[1]           ; yes                    ;
+; ALU_op[0]                                           ; ALU_op[1]           ; yes                    ;
 ; dec3to8:decX|Y[1]                                   ; dec3to8:decX|Mux0   ; yes                    ;
 ; dec3to8:decX|Y[2]                                   ; dec3to8:decX|Mux0   ; yes                    ;
 ; dec3to8:decX|Y[0]                                   ; dec3to8:decX|Mux0   ; yes                    ;
@@ -313,7 +301,7 @@ Encoding Type:  One-Hot
 ; dec3to8:decX|Y[6]                                   ; dec3to8:decX|Mux0   ; yes                    ;
 ; dec3to8:decX|Y[5]                                   ; dec3to8:decX|Mux0   ; yes                    ;
 ; dec3to8:decX|Y[4]                                   ; dec3to8:decX|Mux0   ; yes                    ;
-; Number of user-specified and inferred latches = 27  ;                     ;                        ;
+; Number of user-specified and inferred latches = 13  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -338,23 +326,29 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Total registers                              ; 208   ;
 ; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 16    ;
-; Number of registers using Asynchronous Clear ; 6     ;
+; Number of registers using Asynchronous Clear ; 190   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 200   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |pratica2|programCounter:PC_1|pc[0] ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |pratica2|ULAn:ula|result[13]       ;
-; 12:1               ; 8 bits    ; 64 LEs        ; 56 LEs               ; 8 LEs                  ; No         ; |pratica2|Mux27                     ;
-; 12:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |pratica2|Mux19                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |pratica2|programCounter:PC_1|pc[15]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |pratica2|barrel:barrelShifter|ShiftRight0 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |pratica2|barrel:barrelShifter|ShiftLeft1  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |pratica2|barrel:barrelShifter|ShiftLeft1  ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 56 LEs               ; 8 LEs                  ; No         ; |pratica2|Mux28                            ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |pratica2|Mux26                            ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |pratica2|barrel:barrelShifter|ShiftLeft1  ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |pratica2|ULAn:ula|result[3]               ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |pratica2|ULAn:ula|result[11]              ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 18 LEs               ; 3 LEs                  ; No         ; |pratica2|ULAn:ula|result[14]              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -396,6 +390,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ld             ; 100   ; Unsigned Binary                                 ;
 ; st             ; 101   ; Unsigned Binary                                 ;
 ; And            ; 110   ; Unsigned Binary                                 ;
+; shift_rot      ; 111   ; Unsigned Binary                                 ;
 ; R0             ; 0000  ; Unsigned Binary                                 ;
 ; R1             ; 0001  ; Unsigned Binary                                 ;
 ; R2             ; 0010  ; Unsigned Binary                                 ;
@@ -534,6 +529,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: barrel:barrelShifter ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; lsl            ; 00    ; Unsigned Binary                          ;
+; lsr            ; 01    ; Unsigned Binary                          ;
+; asr            ; 10    ; Unsigned Binary                          ;
+; ror            ; 11    ; Unsigned Binary                          ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                         ;
 +-------------------------------------------+----------------------------------------------+
@@ -588,7 +596,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -598,14 +606,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Oct 07 16:07:52 2022
+    Info: Processing started: Sat Oct 08 00:53:49 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pratica2 -c pratica2
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file rom.v
     Info (12023): Found entity 1: rom
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
     Info (12023): Found entity 1: ram
-Info (12021): Found 7 design units, including 7 entities, in source file pratica2.v
+Info (12021): Found 8 design units, including 8 entities, in source file pratica2.v
     Info (12023): Found entity 1: pratica2
     Info (12023): Found entity 2: dec3to8
     Info (12023): Found entity 3: regn
@@ -613,24 +621,28 @@ Info (12021): Found 7 design units, including 7 entities, in source file pratica
     Info (12023): Found entity 5: programCounter
     Info (12023): Found entity 6: W
     Info (12023): Found entity 7: F
+    Info (12023): Found entity 8: barrel
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.v
     Info (12023): Found entity 1: testbench
 Info (12127): Elaborating entity "pratica2" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at pratica2.v(88): inferring latch(es) for variable "Select", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "Select[0]" at pratica2.v(88)
-Info (10041): Inferred latch for "Select[1]" at pratica2.v(88)
-Info (10041): Inferred latch for "Select[2]" at pratica2.v(88)
-Info (10041): Inferred latch for "Select[3]" at pratica2.v(88)
+Warning (10240): Verilog HDL Always Construct warning at pratica2.v(90): inferring latch(es) for variable "Select", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at pratica2.v(90): inferring latch(es) for variable "ALU_op", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "ALU_op[0]" at pratica2.v(90)
+Info (10041): Inferred latch for "ALU_op[1]" at pratica2.v(90)
+Info (10041): Inferred latch for "Select[0]" at pratica2.v(90)
+Info (10041): Inferred latch for "Select[1]" at pratica2.v(90)
+Info (10041): Inferred latch for "Select[2]" at pratica2.v(90)
+Info (10041): Inferred latch for "Select[3]" at pratica2.v(90)
 Info (12128): Elaborating entity "dec3to8" for hierarchy "dec3to8:decX"
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(291): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at pratica2.v(288): inferring latch(es) for variable "Y", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "Y[0]" at pratica2.v(291)
-Info (10041): Inferred latch for "Y[1]" at pratica2.v(291)
-Info (10041): Inferred latch for "Y[2]" at pratica2.v(291)
-Info (10041): Inferred latch for "Y[3]" at pratica2.v(291)
-Info (10041): Inferred latch for "Y[4]" at pratica2.v(291)
-Info (10041): Inferred latch for "Y[5]" at pratica2.v(291)
-Info (10041): Inferred latch for "Y[6]" at pratica2.v(291)
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(310): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at pratica2.v(307): inferring latch(es) for variable "Y", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Y[0]" at pratica2.v(310)
+Info (10041): Inferred latch for "Y[1]" at pratica2.v(310)
+Info (10041): Inferred latch for "Y[2]" at pratica2.v(310)
+Info (10041): Inferred latch for "Y[3]" at pratica2.v(310)
+Info (10041): Inferred latch for "Y[4]" at pratica2.v(310)
+Info (10041): Inferred latch for "Y[5]" at pratica2.v(310)
+Info (10041): Inferred latch for "Y[6]" at pratica2.v(310)
 Info (12128): Elaborating entity "ram" for hierarchy "ram:memDados"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:memDados|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "ram:memDados|altsyncram:altsyncram_component"
@@ -675,96 +687,86 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_r081" for hierarchy "rom:memInst|altsyncram:altsyncram_component|altsyncram_r081:auto_generated"
 Info (12128): Elaborating entity "regn" for hierarchy "regn:reg_0"
 Info (12128): Elaborating entity "programCounter" for hierarchy "programCounter:PC_1"
-Warning (10230): Verilog HDL assignment warning at pratica2.v(365): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at pratica2.v(387): truncated value with size 32 to match size of target (16)
 Info (12128): Elaborating entity "W" for hierarchy "W:wren"
 Info (12128): Elaborating entity "ULAn" for hierarchy "ULAn:ula"
-Warning (10240): Verilog HDL Always Construct warning at pratica2.v(326): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "result[0]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[1]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[2]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[3]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[4]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[5]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[6]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[7]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[8]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[9]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[10]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[11]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[12]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[13]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[14]" at pratica2.v(330)
-Info (10041): Inferred latch for "result[15]" at pratica2.v(330)
+Warning (10240): Verilog HDL Always Construct warning at pratica2.v(345): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "result[0]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[1]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[2]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[3]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[4]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[5]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[6]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[7]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[8]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[9]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[10]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[11]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[12]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[13]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[14]" at pratica2.v(347)
+Info (10041): Inferred latch for "result[15]" at pratica2.v(347)
 Info (12128): Elaborating entity "F" for hierarchy "F:F_1"
+Info (12128): Elaborating entity "barrel" for hierarchy "barrel:barrelShifter"
+Warning (10230): Verilog HDL assignment warning at pratica2.v(435): truncated value with size 32 to match size of target (16)
+Warning (14026): LATCH primitive "ULAn:ula|result[0]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[1]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[2]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[3]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[4]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[5]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[6]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[7]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[8]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[9]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[10]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[11]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[12]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[13]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[14]" is permanently enabled
+Warning (14026): LATCH primitive "ULAn:ula|result[15]" is permanently enabled
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch ULAn:ula|result[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch ULAn:ula|result[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
-Warning (13012): Latch Select[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Tstep_Q.T0
 Warning (13012): Latch Select[3] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Tstep_Q.T5
+Warning (13012): Latch Select[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[14]
 Warning (13012): Latch Select[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Tstep_Q.T0
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[14]
 Warning (13012): Latch Select[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Tstep_Q.T0
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Tstep_Q.T4
+Warning (13012): Latch ALU_op[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[15]
+Warning (13012): Latch ALU_op[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[14]
 Warning (13012): Latch dec3to8:decX|Y[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[9]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[11]
 Warning (13012): Latch dec3to8:decX|Y[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[9]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[11]
 Warning (13012): Latch dec3to8:decX|Y[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[9]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[11]
 Warning (13012): Latch dec3to8:decX|Y[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[9]
-Warning (13012): Latch dec3to8:decX|Y[6] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[10]
+Warning (13012): Latch dec3to8:decX|Y[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[11]
 Warning (13012): Latch dec3to8:decX|Y[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[9]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[11]
 Warning (13012): Latch dec3to8:decX|Y[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[9]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|dado[11]
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/ProgramasCEFET/quartus/AOC II/pratica2/output_files/pratica2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 525 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 744 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 489 logic cells
+    Info (21061): Implemented 708 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 61 warnings
-    Info: Peak virtual memory: 4618 megabytes
-    Info: Processing ended: Fri Oct 07 16:07:55 2022
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 4619 megabytes
+    Info: Processing ended: Sat Oct 08 00:53:53 2022
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+

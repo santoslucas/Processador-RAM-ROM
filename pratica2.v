@@ -7,9 +7,10 @@ module pratica2 (Resetn, Clock, Run, Done);
 	
 	wire [15:0] DIN;
 	wire [15:0] DATA;
-	wire [15:0] r0, r1, r2, r3, r4, r5, r6, a, g, IR, pc, result, addr, dout;
+	wire [15:0] r0, r1, r2, r3, r4, r5, r6, a, g, IR, pc, result, addr, dout, barrel_out;
 	wire [2:0] III, rX, rY, b_type;
 	wire Imm, w, mvt_or_b, cond, zero, f;
+	wire [1:0] SS;
 	wire [6:0] R_in;
 
 	reg A_in, rX_in, G_in, IR_in, ADDR_in, DOUT_in, W_D, pc_incr, pc_in, F_in;
@@ -24,6 +25,7 @@ module pratica2 (Resetn, Clock, Run, Done);
 	assign rY = IR[2:0];
 	assign mvt_or_b = IR[12];
 	assign b_type = IR[11:9];
+	assign SS = IR[6:5];
 	
 	dec3to8 decX (rX_in, rX, R_in); // produce r0 - r7 register enables
 	ram memDados (addr, Clock, dout, w, DATA);
@@ -75,7 +77,7 @@ module pratica2 (Resetn, Clock, Run, Done);
 	endcase
 	
 	parameter b = 3'b000, beq = 3'b001, bne = 3'b010;
-	parameter mv = 3'b000, mvt_b = 3'b001, add = 3'b010, sub = 3'b011, ld = 3'b100, st = 3'b101, And = 3'b110;
+	parameter mv = 3'b000, mvt_b = 3'b001, add = 3'b010, sub = 3'b011, ld = 3'b100, st = 3'b101, And = 3'b110, shift_rot = 3'b111;
 	// selectors for the BusWires multiplexer
 	parameter R0 = 4'b0000, R1 = 4'b0001, R2 = 4'b0010,
 	R3 = 4'b0011, R4 = 4'b0100, R5 = 4'b0101, R6 = 4'b0110, PC = 4'b0111, G = 4'b1000,
@@ -86,7 +88,7 @@ module pratica2 (Resetn, Clock, Run, Done);
 	// control FSM outputs
 	always @(*) begin
 		IR_in = 0; rX_in = 1'b0; Done = 1'b0; A_in = 1'b0; G_in = 1'b0; ADDR_in = 1'b0; DOUT_in = 1'b0; 
-		W_D = 1'b0; pc_incr = 1'b0; pc_in = 1'b0; F_in = 1'b0; ALU_op = 2'b11; //default values for variables
+		W_D = 1'b0; pc_incr = 1'b0; pc_in = 1'b0; F_in = 1'b0; //default values for variables
 
 		case (Tstep_Q)
 			T0: begin
@@ -95,7 +97,7 @@ module pratica2 (Resetn, Clock, Run, Done);
 				pc_incr = 1'b1;
 			end
 			T1: begin
-				
+				// WAIT
 			end
 
 			T2: begin// store DIN into IR
@@ -150,6 +152,10 @@ module pratica2 (Resetn, Clock, Run, Done);
 						Select = rY;
 						ADDR_in = 1'b1;
 					end
+					shift_rot: begin
+						Select = rX;
+						A_in = 1'b1;
+					end
 					default: ;
 				endcase
 			end
@@ -189,6 +195,13 @@ module pratica2 (Resetn, Clock, Run, Done);
 						G_in = 1'b1;
 					end
 				end
+				shift_rot: begin
+						if (!Imm) Select = rY; 
+						else Select = IR8_IR8_0;
+						ALU_op = 2'b11;
+						G_in = 1'b1;
+						F_in = 1'b1;
+				end				
 				default: ;
 				endcase
 			end
@@ -220,6 +233,11 @@ module pratica2 (Resetn, Clock, Run, Done);
 						pc_in = 1'b1;
 						Done = 1'b1;
 					end
+				end
+				shift_rot: begin
+						Select = G; 
+						rX_in = 1'b1;
+						Done = 1'b1;
 				end
 				default: ;
 				endcase
@@ -255,8 +273,9 @@ module pratica2 (Resetn, Clock, Run, Done);
 	regn ADDR(BusWires,   Resetn, ADDR_in, Clock, addr);
 	regn DOUT(BusWires,   Resetn, DOUT_in, Clock, dout);
 
-	ULAn ula (a, BusWires, ALU_op, result, zero);
+	ULAn ula (a, BusWires, barrel_out, ALU_op, result, zero);
 	F F_1 (F_in, zero, Clock, f);
+	barrel barrelShifter(SS, BusWires[3:0], a, barrel_out);
 
 	// MULTIPLEXADOR: define the internal processor bus
 	always @(*) begin
@@ -308,7 +327,7 @@ module regn (BusWires, Resetn, enable, Clock, dado);
 	// Escrita
 	always @(posedge Clock, negedge Resetn) begin
 		if(!Resetn) begin
-			dado = 16'bx;
+			dado = 16'b0;
 		end
 		else if(enable) begin
 			dado = BusWires;
@@ -316,8 +335,8 @@ module regn (BusWires, Resetn, enable, Clock, dado);
 	end
 endmodule
 
-module ULAn (in_1, in_2, OPcode, result, zero);
-	input [15:0] in_1, in_2;
+module ULAn (in_1, in_2, barrel_out, OPcode, result, zero);
+	input [15:0] in_1, in_2, barrel_out;
 	input  [1:0]OPcode;
 	output reg [15:0] result;
 	output reg zero;
@@ -325,7 +344,7 @@ module ULAn (in_1, in_2, OPcode, result, zero);
 	always@(*) begin
 		if(OPcode == 2'b00) //add
 			result = (in_1 + in_2);
-		if(OPcode == 2'b01)// sub
+		else if(OPcode == 2'b01)// sub
 			result = (in_1 - in_2);
 		else if (OPcode == 2'b10) begin // and
 			if (in_1 & in_2) begin
@@ -334,6 +353,9 @@ module ULAn (in_1, in_2, OPcode, result, zero);
 			else begin
 				result = 16'b0000000000000000;
 			end
+		end
+		else if (OPcode == 2'b11) begin
+			result = barrel_out;
 		end
 	end
 	
@@ -393,5 +415,25 @@ module F (F_in, zero, Clock, f);
 		if(F_in) begin
 			f = zero;
 		end
+	end
+endmodule
+
+module barrel (shift_type, shift, data_in, data_out);
+	input wire [1:0] shift_type;
+	input wire [3:0] shift;
+	input wire [15:0] data_in;
+	output reg [15:0] data_out;
+	
+	parameter lsl = 2'b00, lsr = 2'b01, asr = 2'b10, ror = 2'b11;
+	
+	always @(*) begin
+		if (shift_type == lsl)
+			data_out = data_in << shift;
+		else if (shift_type == lsr)
+			data_out = data_in >> shift;
+		else if (shift_type == asr)
+			data_out = {{16{data_in[15]}},data_in} >> shift; // sign extend
+		else // ror
+			data_out = (data_in >> shift) | (data_in << (16 - shift));
 	end
 endmodule

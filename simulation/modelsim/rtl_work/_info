@@ -3,34 +3,54 @@ K3
 13
 cModel Technology
 Z0 dC:\ProgramasCEFET\quartus\AOC II\pratica2\simulation\modelsim
-vdec3to8
-IkgKnM<89C2ZBc]ZZ0UFIk2
-VIQV6fl>GW1LCW2K:F2BSP3
+vbarrel
+I_5UCdFXP[83aR4I8c5kS52
+V=]cL8o84G2<l9Z4mgbNb[1
 Z1 dC:\ProgramasCEFET\quartus\AOC II\pratica2\simulation\modelsim
-Z2 w1665169516
+Z2 w1665200228
 Z3 8C:/ProgramasCEFET/quartus/AOC II/pratica2/pratica2.v
 Z4 FC:/ProgramasCEFET/quartus/AOC II/pratica2/pratica2.v
-L0 281
+L0 421
 Z5 OV;L;10.1d;51
 r1
 31
-Z6 !s108 1665169699.125000
+Z6 !s108 1665201297.403000
 Z7 !s107 C:/ProgramasCEFET/quartus/AOC II/pratica2/pratica2.v|
 Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2|C:/ProgramasCEFET/quartus/AOC II/pratica2/pratica2.v|
 Z9 o-vlog01compat -work work -O0
 Z10 !s92 -vlog01compat -work work {+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2} -O0
 !i10b 1
-!s100 MX3[WSbN78`^YkVZkLK[;1
+!s100 KZM`?iO2B`;D^BkHJVjLU3
+!s85 0
+!s101 -O0
+vdec3to8
+IQnMcjBT[0cT`m[[>2RQlJ3
+VIQV6fl>GW1LCW2K:F2BSP3
+R1
+R2
+R3
+R4
+L0 300
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 `4T;>C@_05OQ>1b<ThE@Y2
 !s85 0
 !s101 -O0
 vF
-Io03`^]fOVQdJnb9gD2iKb1
+IE[F3G:0k]:0O0dGR;Jh2@0
 VOT=NNzmYTkeQ8e5YA<5A50
 R1
 R2
 R3
 R4
-L0 388
+L0 410
 R5
 r1
 31
@@ -41,12 +61,12 @@ R9
 R10
 n@f
 !i10b 1
-!s100 bkLHiL`z[<bg66:2ggYV11
+!s100 GPOeBPm[KJhBFlno[<IAV2
 !s85 0
 !s101 -O0
 vpratica2
-Ib:QA6clgX9O>nm]Q:gkFD2
-VYk[Y6AWnMA3WTlDk>8]jQ1
+IdzT:m[Sz9CL6khiQL6M:M0
+Vj]1[5oFN>]a2aa43U`o2e2
 R1
 R2
 R3
@@ -61,17 +81,17 @@ R8
 R9
 R10
 !i10b 1
-!s100 [^OI[S1liQE0c?W_1YZWB1
+!s100 ?6<[BjS;4:NA:iRB7H3ZF1
 !s85 0
 !s101 -O0
 vprogramCounter
-IedKUjlQd0FPT^YFF2^iI@2
+I?8^dQbJ:e<XBWecQPLJBS2
 Vm=[YQNaLZ=l?mf=a3n1`T2
 R1
 R2
 R3
 R4
-L0 350
+L0 372
 R5
 r1
 31
@@ -82,7 +102,7 @@ R9
 R10
 nprogram@counter
 !i10b 1
-!s100 1@@K?JoaT2W2?:GmJiAl=2
+!s100 HmThkVe4I[DbzDWL_2OO42
 !s85 0
 !s101 -O0
 vram
@@ -101,18 +121,18 @@ R10
 !i10b 1
 !s100 YBdBCE8nQL>8Zc4AHK_lP0
 !s85 0
-!s108 1665169699.067000
+!s108 1665201297.317000
 !s107 C:/ProgramasCEFET/quartus/AOC II/pratica2/ram.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2|C:/ProgramasCEFET/quartus/AOC II/pratica2/ram.v|
 !s101 -O0
 vregn
-IP:9Q_;`I>b]VSSi0omA952
+IORf7LAW3>NVEM;:nJRPY60
 VJ7XM`]8];WkDJIO`J>S9N1
 R1
 R2
 R3
 R4
-L0 303
+L0 322
 R5
 r1
 31
@@ -122,7 +142,7 @@ R8
 R9
 R10
 !i10b 1
-!s100 8oiiEiWP][jaOGonkC;hC3
+!s100 L]iF3IZgRGCHCMQ1h@K>Q3
 !s85 0
 !s101 -O0
 vrom
@@ -141,17 +161,17 @@ R10
 !i10b 1
 !s100 lcg>SaWc9N2Vh=4OXb2RV3
 !s85 0
-!s108 1665169699.007000
+!s108 1665201297.253000
 !s107 C:/ProgramasCEFET/quartus/AOC II/pratica2/rom.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2|C:/ProgramasCEFET/quartus/AOC II/pratica2/rom.v|
 !s101 -O0
 vtestbench
 !i10b 1
-!s100 NSaRUYlSGZ?:M:<elCgGg2
-I2Z?C3GCZCa>d`b[VOG=4O3
+!s100 Ve3ZLK3@Nlkb@JPSGEg2Y3
+IPKzn]a:SlJ^NT8HWOn[2<3
 VhGfW:390DM[oDMzegDH9`2
 R1
-w1665169092
+w1665201165
 8C:/ProgramasCEFET/quartus/AOC II/pratica2/testbench.v
 FC:/ProgramasCEFET/quartus/AOC II/pratica2/testbench.v
 L0 1
@@ -159,20 +179,20 @@ R5
 r1
 !s85 0
 31
-!s108 1665169699.299000
+!s108 1665201297.603000
 !s107 C:/ProgramasCEFET/quartus/AOC II/pratica2/testbench.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2|C:/ProgramasCEFET/quartus/AOC II/pratica2/testbench.v|
 !s101 -O0
 R9
 R10
 vULAn
-I4AbE_Mo?c1`JPiVT7zPk33
-VMJFG[RF1mlkIDCBchO;>Y2
+ICXS8LVeg>NM1EQ4FP^V?n1
+VNi[380R[HWW]7<;EnMMd`0
 R1
 R2
 R3
 R4
-L0 319
+L0 338
 R5
 r1
 31
@@ -183,17 +203,17 @@ R9
 R10
 n@u@l@an
 !i10b 1
-!s100 z?1_A8Ah[ZYTBZhPUV2k73
+!s100 o4z]mf5Y3FofT8AifQYgj3
 !s85 0
 !s101 -O0
 vW
-IWI@LQ5S6D><4a[XlLh[GL3
+I99V[Tj17ceo<NKKTPVYz[1
 Vh6Ydo;fWh7^2H_9z1^KHO0
 R1
 R2
 R3
 R4
-L0 374
+L0 396
 R5
 r1
 31
@@ -204,6 +224,6 @@ R9
 R10
 n@w
 !i10b 1
-!s100 A5?[j6<93T`]dQ_<hZPzL2
+!s100 71Uci@JVcH1WYZEjG@?TL0
 !s85 0
 !s101 -O0

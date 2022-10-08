@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Oct 07 16:08:03 2022
+Fitter Status : Successful - Sat Oct 08 00:54:04 2022
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : pratica2
 Top-level Entity Name : pratica2
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 378 / 33,216 ( 1 % )
-    Total combinational functions : 302 / 33,216 ( < 1 % )
+Total logic elements : 601 / 33,216 ( 2 % )
+    Total combinational functions : 521 / 33,216 ( 2 % )
     Dedicated logic registers : 208 / 33,216 ( < 1 % )
 Total registers : 208
 Total pins : 4 / 475 ( < 1 % )

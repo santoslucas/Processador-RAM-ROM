@@ -2,55 +2,55 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'Tstep_Q.T4'
-Slack : -8.370
-TNS   : -147.968
-
 Type  : Slow Model Setup 'Clock'
-Slack : -7.420
-TNS   : -1323.608
+Slack : -11.957
+TNS   : -1392.935
 
-Type  : Slow Model Setup 'Tstep_Q.T0'
-Slack : -5.778
-TNS   : -16.116
+Type  : Slow Model Setup 'Tstep_Q.T1'
+Slack : -3.693
+TNS   : -13.203
 
 Type  : Slow Model Setup 'regn:reg_IR|dado[10]'
-Slack : -2.117
-TNS   : -8.330
+Slack : -1.910
+TNS   : -9.911
+
+Type  : Slow Model Setup 'Tstep_Q.T4'
+Slack : -1.789
+TNS   : -7.866
 
 Type  : Slow Model Hold 'Tstep_Q.T4'
-Slack : -3.390
-TNS   : -34.717
-
-Type  : Slow Model Hold 'Clock'
-Slack : -3.257
-TNS   : -30.920
-
-Type  : Slow Model Hold 'Tstep_Q.T0'
-Slack : -3.082
-TNS   : -9.278
+Slack : -3.281
+TNS   : -12.261
 
 Type  : Slow Model Hold 'regn:reg_IR|dado[10]'
-Slack : -2.750
-TNS   : -15.039
+Slack : -3.154
+TNS   : -14.625
+
+Type  : Slow Model Hold 'Clock'
+Slack : -2.685
+TNS   : -9.278
+
+Type  : Slow Model Hold 'Tstep_Q.T1'
+Slack : -1.377
+TNS   : -4.645
 
 Type  : Slow Model Recovery 'regn:reg_IR|dado[10]'
-Slack : -2.947
-TNS   : -14.657
+Slack : -2.789
+TNS   : -16.412
 
 Type  : Slow Model Removal 'regn:reg_IR|dado[10]'
-Slack : 1.083
+Slack : 0.928
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'Clock'
 Slack : -2.000
 TNS   : -387.610
 
-Type  : Slow Model Minimum Pulse Width 'Tstep_Q.T4'
-Slack : -0.363
-TNS   : -7.986
+Type  : Slow Model Minimum Pulse Width 'Tstep_Q.T1'
+Slack : 0.500
+TNS   : 0.000
 
-Type  : Slow Model Minimum Pulse Width 'Tstep_Q.T0'
+Type  : Slow Model Minimum Pulse Width 'Tstep_Q.T4'
 Slack : 0.500
 TNS   : 0.000
 
@@ -58,55 +58,55 @@ Type  : Slow Model Minimum Pulse Width 'regn:reg_IR|dado[10]'
 Slack : 0.500
 TNS   : 0.000
 
-Type  : Fast Model Setup 'Tstep_Q.T4'
-Slack : -3.865
-TNS   : -66.760
-
 Type  : Fast Model Setup 'Clock'
-Slack : -3.210
-TNS   : -520.832
+Slack : -5.365
+TNS   : -623.523
 
-Type  : Fast Model Setup 'Tstep_Q.T0'
-Slack : -2.020
-TNS   : -5.089
+Type  : Fast Model Setup 'Tstep_Q.T1'
+Slack : -1.102
+TNS   : -3.811
+
+Type  : Fast Model Setup 'Tstep_Q.T4'
+Slack : -0.456
+TNS   : -0.931
 
 Type  : Fast Model Setup 'regn:reg_IR|dado[10]'
-Slack : -0.415
-TNS   : -0.551
-
-Type  : Fast Model Hold 'Clock'
-Slack : -1.832
-TNS   : -36.986
+Slack : -0.299
+TNS   : -0.568
 
 Type  : Fast Model Hold 'Tstep_Q.T4'
-Slack : -1.815
-TNS   : -22.308
-
-Type  : Fast Model Hold 'Tstep_Q.T0'
-Slack : -1.711
-TNS   : -5.445
+Slack : -1.777
+TNS   : -6.709
 
 Type  : Fast Model Hold 'regn:reg_IR|dado[10]'
-Slack : -1.601
-TNS   : -8.757
+Slack : -1.707
+TNS   : -8.411
+
+Type  : Fast Model Hold 'Clock'
+Slack : -1.478
+TNS   : -13.011
+
+Type  : Fast Model Hold 'Tstep_Q.T1'
+Slack : -0.943
+TNS   : -3.373
 
 Type  : Fast Model Recovery 'regn:reg_IR|dado[10]'
-Slack : -0.781
-TNS   : -2.818
+Slack : -0.713
+TNS   : -3.429
 
 Type  : Fast Model Removal 'regn:reg_IR|dado[10]'
-Slack : 0.510
+Slack : 0.443
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'Clock'
 Slack : -2.000
 TNS   : -387.610
 
-Type  : Fast Model Minimum Pulse Width 'Tstep_Q.T4'
-Slack : 0.134
+Type  : Fast Model Minimum Pulse Width 'Tstep_Q.T1'
+Slack : 0.500
 TNS   : 0.000
 
-Type  : Fast Model Minimum Pulse Width 'Tstep_Q.T0'
+Type  : Fast Model Minimum Pulse Width 'Tstep_Q.T4'
 Slack : 0.500
 TNS   : 0.000
 

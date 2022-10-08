@@ -1,5 +1,5 @@
 Flow report for pratica2
-Fri Oct 07 16:08:09 2022
+Sat Oct 08 00:54:11 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri Oct 07 16:08:09 2022           ;
+; Flow Status                        ; Successful - Sat Oct 08 00:54:11 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; pratica2                                        ;
 ; Top-level Entity Name              ; pratica2                                        ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 378 / 33,216 ( 1 % )                            ;
-;     Total combinational functions  ; 302 / 33,216 ( < 1 % )                          ;
+; Total logic elements               ; 601 / 33,216 ( 2 % )                            ;
+;     Total combinational functions  ; 521 / 33,216 ( 2 % )                            ;
 ;     Dedicated logic registers      ; 208 / 33,216 ( < 1 % )                          ;
 ; Total registers                    ; 208                                             ;
 ; Total pins                         ; 4 / 475 ( < 1 % )                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/07/2022 16:07:53 ;
+; Start date & time ; 10/08/2022 00:53:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pratica2            ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 123598315120043.166516967317820       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 123598315120043.166520123015680       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                             ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
@@ -101,12 +101,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4608 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:08     ; 1.0                     ; 4877 MB             ; 00:00:07                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4559 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4609 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:00:10     ; 1.0                     ; 4887 MB             ; 00:00:10                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4555 MB             ; 00:00:02                           ;
 ; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4545 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4512 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:13     ; --                      ; --                  ; 00:00:13                           ;
+; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:17                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
