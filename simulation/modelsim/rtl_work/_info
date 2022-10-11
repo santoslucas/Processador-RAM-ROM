@@ -2,228 +2,290 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\ProgramasCEFET\quartus\AOC II\pratica2\simulation\modelsim
+Z0 dC:\ProgramasCEFET\quartus\AOC II\pratica2_final\simulation\modelsim
 vbarrel
-I_5UCdFXP[83aR4I8c5kS52
+In[dZ9?Q`bmWbYU^<ERdfP0
 V=]cL8o84G2<l9Z4mgbNb[1
-Z1 dC:\ProgramasCEFET\quartus\AOC II\pratica2\simulation\modelsim
-Z2 w1665200228
-Z3 8C:/ProgramasCEFET/quartus/AOC II/pratica2/pratica2.v
-Z4 FC:/ProgramasCEFET/quartus/AOC II/pratica2/pratica2.v
-L0 421
-Z5 OV;L;10.1d;51
+Z1 dC:\ProgramasCEFET\quartus\AOC II\pratica2_final\simulation\modelsim
+w1665513238
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/barrel.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/barrel.v
+L0 1
+Z2 OV;L;10.1d;51
 r1
 31
-Z6 !s108 1665201297.403000
-Z7 !s107 C:/ProgramasCEFET/quartus/AOC II/pratica2/pratica2.v|
-Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2|C:/ProgramasCEFET/quartus/AOC II/pratica2/pratica2.v|
-Z9 o-vlog01compat -work work -O0
-Z10 !s92 -vlog01compat -work work {+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2} -O0
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work {+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final} -O0
 !i10b 1
-!s100 KZM`?iO2B`;D^BkHJVjLU3
+!s100 DKle^=nXULbPSMfg>RZBI1
 !s85 0
+!s108 1665513479.893000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/barrel.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/barrel.v|
+!s101 -O0
+vClock_divider
+I6mA?M]1kKSPzSzcm<Ff9z0
+V:`UoAT^Q45OBDX<bbo6Qk1
+R1
+w1665508797
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/Clock_divider.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/Clock_divider.v
+L0 4
+R2
+r1
+31
+R3
+R4
+n@clock_divider
+!i10b 1
+!s100 KmS<?;UbQDFBWN`MRBMeh1
+!s85 0
+!s108 1665513479.413000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/Clock_divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/Clock_divider.v|
 !s101 -O0
 vdec3to8
-IQnMcjBT[0cT`m[[>2RQlJ3
+I2Q>mAaMB2TB_0S<?8=9lJ0
 VIQV6fl>GW1LCW2K:F2BSP3
 R1
+Z5 w1665513191
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/dec3to8.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/dec3to8.v
+L0 1
 R2
-R3
-R4
-L0 300
-R5
 r1
 31
-R6
-R7
-R8
-R9
-R10
+R3
+R4
 !i10b 1
-!s100 `4T;>C@_05OQ>1b<ThE@Y2
+!s100 _l>910b[CjQ4?IRjkBIdH0
 !s85 0
+!s108 1665513479.527000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/dec3to8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/dec3to8.v|
+!s101 -O0
+vDisplay
+Io7nIc@1Ged^jVlfoef[jJ3
+Vadf32hWiKQk08JL^A_Cfh3
+R1
+w1665511094
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/Display.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/Display.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@display
+!i10b 1
+!s100 D<z5aJa_Kn@0[6X5CMGIH3
+!s85 0
+!s108 1665513479.468000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/Display.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/Display.v|
 !s101 -O0
 vF
-IE[F3G:0k]:0O0dGR;Jh2@0
+ISdecA2nP23[:DjVW<NK982
 VOT=NNzmYTkeQ8e5YA<5A50
 R1
+w1665513218
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/F.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/F.v
+L0 1
 R2
-R3
-R4
-L0 410
-R5
 r1
 31
-R6
-R7
-R8
-R9
-R10
+R3
+R4
 n@f
 !i10b 1
-!s100 GPOeBPm[KJhBFlno[<IAV2
+!s100 <MfJfIC]^NQAkUzllUm`A3
 !s85 0
+!s108 1665513479.835000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/F.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/F.v|
 !s101 -O0
-vpratica2
-IdzT:m[Sz9CL6khiQL6M:M0
-Vj]1[5oFN>]a2aa43U`o2e2
+vpratica2_final
+IA7IdcIe8GgiNDC85lDi[M2
+VzgJ9F4^[CcGM=jI@Ul7mW3
 R1
+w1665512446
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/pratica2_final.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/pratica2_final.v
+L0 1
 R2
-R3
-R4
-L0 4
-R5
 r1
 31
-R6
-R7
-R8
-R9
-R10
+R3
+R4
 !i10b 1
-!s100 ?6<[BjS;4:NA:iRB7H3ZF1
+!s100 F7:PjkZ@D_3QgDln7Si]@2
 !s85 0
+!s108 1665513479.188000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/pratica2_final.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/pratica2_final.v|
+!s101 -O0
+vproc2
+I^C2oBj49OQ:d00Kha9l`j3
+VKU6OGingbVjlWih:flIne3
+R1
+w1665513235
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/proc2.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/proc2.v
+L0 4
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ?4^:Sm>[Q_M?zWmD?nK7:1
+!s85 0
+!s108 1665513479.239000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/proc2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/proc2.v|
 !s101 -O0
 vprogramCounter
-I?8^dQbJ:e<XBWecQPLJBS2
+IbJ^EHPOUf=Id`ae8fY`^43
 Vm=[YQNaLZ=l?mf=a3n1`T2
 R1
-R2
-R3
-R4
-L0 372
 R5
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/programCounter.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/programCounter.v
+L0 1
+R2
 r1
 31
-R6
-R7
-R8
-R9
-R10
+R3
+R4
 nprogram@counter
 !i10b 1
-!s100 HmThkVe4I[DbzDWL_2OO42
+!s100 PW6>=<K[kzA>hJ^z1HE<52
 !s85 0
+!s108 1665513479.715000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/programCounter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/programCounter.v|
 !s101 -O0
 vram
-IJ9Nb[KE637TS]lAc:`5Q:1
+ILiC_[^ZMGM;edCkF4EaOh2
 VYPnfGODfaSS;3ml?KH^Bl3
 R1
-w1664755238
-8C:/ProgramasCEFET/quartus/AOC II/pratica2/ram.v
-FC:/ProgramasCEFET/quartus/AOC II/pratica2/ram.v
-L0 4
-R5
+w1665508693
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/ram.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/ram.v
+L0 39
+R2
 r1
 31
-R9
-R10
-!i10b 1
-!s100 YBdBCE8nQL>8Zc4AHK_lP0
-!s85 0
-!s108 1665201297.317000
-!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2/ram.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2|C:/ProgramasCEFET/quartus/AOC II/pratica2/ram.v|
-!s101 -O0
-vregn
-IORf7LAW3>NVEM;:nJRPY60
-VJ7XM`]8];WkDJIO`J>S9N1
-R1
-R2
 R3
 R4
-L0 322
+!i10b 1
+!s100 A0^Ckz@WVF3AEFnY0mMfE0
+!s85 0
+!s108 1665513479.360000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/ram.v|
+!s101 -O0
+vregn
+ITb=6fn6hWM8^TM4LVdKP@1
+VJ7XM`]8];WkDJIO`J>S9N1
+R1
 R5
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/regn.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/regn.v
+L0 1
+R2
 r1
 31
-R6
-R7
-R8
-R9
-R10
+R3
+R4
 !i10b 1
-!s100 L]iF3IZgRGCHCMQ1h@K>Q3
+!s100 oFi220ibd3Ib8?9k3`_N52
 !s85 0
+!s108 1665513479.590000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/regn.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/regn.v|
 !s101 -O0
 vrom
-I@d1Uz0S?YUWE4jVb^5JRT2
+Imbb94<60S8VQ6TPWkAe7M0
 V8NUROP`>QJI`_:<FRcB9C2
 R1
-w1664755231
-8C:/ProgramasCEFET/quartus/AOC II/pratica2/rom.v
-FC:/ProgramasCEFET/quartus/AOC II/pratica2/rom.v
-L0 4
-R5
+w1665509948
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/rom.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/rom.v
+L0 39
+R2
 r1
 31
-R9
-R10
+R3
+R4
 !i10b 1
-!s100 lcg>SaWc9N2Vh=4OXb2RV3
+!s100 J47_ddNOL7H>77mGk6DlG2
 !s85 0
-!s108 1665201297.253000
-!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2/rom.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2|C:/ProgramasCEFET/quartus/AOC II/pratica2/rom.v|
+!s108 1665513479.295000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/rom.v|
 !s101 -O0
 vtestbench
 !i10b 1
-!s100 Ve3ZLK3@Nlkb@JPSGEg2Y3
-IPKzn]a:SlJ^NT8HWOn[2<3
+!s100 ak3e?T:_5>X:lNHA4D8T`0
+I9hR8nQTiRk2lPbH?cll2d1
 VhGfW:390DM[oDMzegDH9`2
 R1
-w1665201165
-8C:/ProgramasCEFET/quartus/AOC II/pratica2/testbench.v
-FC:/ProgramasCEFET/quartus/AOC II/pratica2/testbench.v
+w1665510193
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/testbench.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/testbench.v
 L0 1
-R5
+R2
 r1
 !s85 0
 31
-!s108 1665201297.603000
-!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2/testbench.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2|C:/ProgramasCEFET/quartus/AOC II/pratica2/testbench.v|
+!s108 1665513479.950000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/testbench.v|
 !s101 -O0
-R9
-R10
+R3
+R4
 vULAn
-ICXS8LVeg>NM1EQ4FP^V?n1
+IPLdS:KhR_zC[^KVBjFUE52
 VNi[380R[HWW]7<;EnMMd`0
 R1
-R2
-R3
-R4
-L0 338
 R5
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/ULAn.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/ULAn.v
+L0 1
+R2
 r1
 31
-R6
-R7
-R8
-R9
-R10
+R3
+R4
 n@u@l@an
 !i10b 1
-!s100 o4z]mf5Y3FofT8AifQYgj3
+!s100 Oj4E;o?j3n>3QhmGUikWT2
 !s85 0
+!s108 1665513479.654000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/ULAn.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/ULAn.v|
 !s101 -O0
 vW
-I99V[Tj17ceo<NKKTPVYz[1
+ITeEIS>@Gh[<I_:1YcgSae3
 Vh6Ydo;fWh7^2H_9z1^KHO0
 R1
+w1665513201
+8C:/ProgramasCEFET/quartus/AOC II/pratica2_final/W.v
+FC:/ProgramasCEFET/quartus/AOC II/pratica2_final/W.v
+L0 1
 R2
-R3
-R4
-L0 396
-R5
 r1
 31
-R6
-R7
-R8
-R9
-R10
+R3
+R4
 n@w
 !i10b 1
-!s100 71Uci@JVcH1WYZEjG@?TL0
+!s100 0:ed9;fHN1j99O4kU?7TQ1
 !s85 0
+!s108 1665513479.776000
+!s107 C:/ProgramasCEFET/quartus/AOC II/pratica2_final/W.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOC II/pratica2_final|C:/ProgramasCEFET/quartus/AOC II/pratica2_final/W.v|
 !s101 -O0

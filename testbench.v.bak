@@ -1,121 +1,155 @@
-//`include "ram.v"
-//`include "rom.v"
-//`include "parteA.v"
-
-module testbench ();
-	reg [15:0] DIN;
+module testbench;
 	reg Resetn, Clock, Run;
 	wire Done;
+	wire [15:0] r0, r1, r2, r3, r4, pc;
 
-    parteA proc(DIN, Resetn, Clock, Run, Done);
+    proc2 proc(Resetn, Clock, Run, Done, r0, r1, r2, r3, r4, pc);
 
    initial begin
         Clock = 1'b0;
         Run = 1'b1;
         Resetn = 1'b1;
-        $monitor("Done: %b | r0: %d | r1: %h | r2: %h | r3: %h | r4: %h | r5: %h | r6: %h | r7: %h | a: %h | g: %h | IR: %b", Done, proc.r0,proc.r1,proc.r2,proc.r3,proc.r4,proc.r5,proc.r6,proc.r7,proc.a,proc.g,proc.IR);
+        $monitor("T%d | Done: %b | r0: %d | r1: %d | r2: %d | r3: %b | r4: %d | r5: %d | r6: %d | buswires: %d | pc: %d | pc_incr: %b\naddr: %d | addr_in: %b | DATA: %d | dout: %d | dout_in: %b | a: %d | g: %d | f: %d | F_in: %b | zero: %b | IR: %b | W: %b\n", proc.Tstep_Q, Done, proc.r0,proc.r1,proc.r2,proc.r3,proc.r4,proc.r5,proc.r6, proc.BusWires, proc.pc,proc.pc_incr, proc.addr, proc.ADDR_in, proc.DATA, proc.dout, proc.DOUT_in, proc.a,proc.g,proc.f, proc.F_in, proc.zero, proc.IR,proc.w);
     end
 
    initial begin
-        DIN = 16'b0001000000011100; // mv r0, #28
-        //$display("0) mv r0, #28");
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        /*$display("Reg[%d]= %d | R_in= %b| BusWires= %d", proc.rX, proc.r0, proc.R_in[0], proc.BusWires);
-        $display("---------------------------------------------------------------------------------------------------------------------------------");
-        */#1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        /*$display("Reg[%d]= %d | R_in= %b| BusWires= %d", proc.rX, proc.r0, proc.R_in[0], proc.BusWires);
-        $display("---------------------------------------------------------------------------------------------------------------------------------");
-        */#1
-//------------------------------------------------------------------------------------------------------------------------
-        DIN = 16'b0011001011111111; // mvt r1, #0xFF
-        //$display("\n1) mvt r1, #0xFF");
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        /*$display("Reg[%d]= %h | R_in= %b| BusWires= %h", proc.rX, proc.r1, proc.R_in[1], proc.BusWires);
-        $display("---------------------------------------------------------------------------------------------------------------------------------");
-        */#1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        /*$display("Reg[%d]= %h | R_in= %b| BusWires= %h", proc.rX, proc.r1, proc.R_in[1], proc.BusWires);
-        $display("---------------------------------------------------------------------------------------------------------------------------------");
-        */#1
-//------------------------------------------------------------------------------------------------------------------------
-        DIN = 16'b0101001011111111; // add r1, #0xFF
-        //$display("\n2) add r1, #0xFF");
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        /*$display("Reg[%d]= %h | R_in= %b| BusWires= %h", proc.rX, proc.r1, proc.R_in[1], proc.BusWires);
-        $display("---------------------------------------------------------------------------------------------------------------------------------");
-        $display("a= %h", proc.a);
-        $display("g= %h", proc.g);*/
+		  $display("-------------------------------------- MV --------------------------------------");
+		  Clock = ~Clock;
         #1
         Clock = ~Clock;
         #1
         Clock = ~Clock;
-        /*$display("Reg[%d]= %h | R_in= %b| BusWires= %h", proc.rX, proc.g, proc.R_in[1], proc.BusWires);
-        $display("---------------------------------------------------------------------------------------------------------------------------------");
-        $display("a= %h", proc.a);
-        $display("g= %h", proc.g);*/
         #1
         Clock = ~Clock;
         #1
         Clock = ~Clock;
-        /*$display("Reg[%d]= %h | R_in= %b| BusWires= %h", proc.rX, proc.r1, proc.R_in[1], proc.BusWires);
-        $display("---------------------------------------------------------------------------------------------------------------------------------");
-        $display("a= %h", proc.a);
-        $display("g= %h", proc.g);*/
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+		  
+		  $display("-------------------------------------- MV --------------------------------------");
+		  Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+		  
+		  
+        $display("-------------------------------------- ADD --------------------------------------");
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
         #1
         Clock = ~Clock;
         #1
         Clock = ~Clock;
 		  #1
-        /*$display("Reg[%d]= %h | R_in= %b| BusWires= %h", proc.rX, proc.r1, proc.R_in[1], proc.BusWires);
-        $display("---------------------------------------------------------------------------------------------------------------------------------");
-        $display("a= %h", proc.a);
-        $display("g= %h", proc.g);*/
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
 
-        //------------------------------------------------------------------------------------------------------------------------
-        DIN = 16'b0110001000000000; // sub r1, r0
-        //$display("\n3) sub r1, r0");
+        $display("-------------------------------------- MV --------------------------------------");
         Clock = ~Clock;
         #1
         Clock = ~Clock;
-        /*$display("Reg[%d]= %h | R_in= %b| BusWires= %h", proc.rX, proc.r1, proc.R_in[1], proc.BusWires);
-        $display("---------------------------------------------------------------------------------------------------------------------------------");
-        $display("a= %h", proc.a);
-        $display("g= %h", proc.g);*/
         #1
         Clock = ~Clock;
         #1
         Clock = ~Clock;
-        /*$display("Reg[%d]= %h | R_in= %b| BusWires= %h", proc.rX, proc.g, proc.R_in[1], proc.BusWires);
-        $display("---------------------------------------------------------------------------------------------------------------------------------");
-        $display("a= %h", proc.a);
-        $display("g= %h", proc.g);*/
         #1
         Clock = ~Clock;
         #1
         Clock = ~Clock;
-        /*$display("Reg[%d]= %h | R_in= %b| BusWires= %h", proc.rX, proc.r1, proc.R_in[1], proc.BusWires);
-        $display("---------------------------------------------------------------------------------------------------------------------------------");
-        $display("a= %h", proc.a);
-        $display("g= %h", proc.g);*/
         #1
         Clock = ~Clock;
         #1
         Clock = ~Clock;
-        /*$display("Reg[%d]= %h | R_in= %b| BusWires= %h", proc.rX, proc.r1, proc.R_in[1], proc.BusWires);
-        $display("---------------------------------------------------------------------------------------------------------------------------------");
-        $display("a= %h", proc.a);
-        $display("g= %h", proc.g);*/
+		  #1
+        
+		  $display("-------------------------------------- ADD --------------------------------------");
+		  Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+		  Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+		  Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+		  Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+		  Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+		  Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+		  
+        $display("-------------------------------------- SUB --------------------------------------");
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;  
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+		  #1
+		  Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+		  Clock = ~Clock;
+        #1
+        Clock = ~Clock;
+        #1
+		  
+
+        Clock = ~Clock;
+        #1
+        Clock = ~Clock;
     end
 endmodule
  

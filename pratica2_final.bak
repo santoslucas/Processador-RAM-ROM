@@ -1,0 +1,115 @@
+module pratica2 (
+    input wire [17:0] SW,
+	 input wire CLOCK_50,
+
+    output wire [6:0] HEX7,
+    output wire [6:0] HEX6,
+    output wire [6:0] HEX5,
+    output wire [6:0] HEX4,
+    output wire [6:0] HEX3,
+    output wire [6:0] HEX2,
+    output wire [6:0] HEX1,
+    output wire [6:0] HEX0,
+    output wire [7:0] LEDG
+);
+  wire Clock;
+  Clock_divider #(50000000) divider (CLOCK_50, Clock);
+
+  wire [15:0] r0, r1, r2, r3, r4, pc;
+  /*wire [3:0] _d0, _d1, _d2, _d3;
+  reg [15:0] regD;
+  
+  assign _d3 = regD[3:0];
+  assign _d2 = regD[7:4];
+  assign _d1 = regD[11:8];
+  assign _d0 = regD[15:12];
+  
+  proc2 proc(1, Clock, 1, LEDG[0], r0, r1, r2, r3, r4, pc);
+  
+  always@(*) begin
+		case(SW[3:0])
+			4'b0000: begin
+				regD = r0;
+			end
+			
+			4'b0001: begin
+				regD = r1;
+			end
+			
+			4'b0010: begin
+				regD = r2;
+			end	
+			
+			4'b0011: begin
+				regD = r3;
+			end
+			
+			4'b0100: begin
+				regD = r4;
+			end
+		endcase
+  end*/
+
+  display D0(
+    r0[3:0],
+    HEX7
+  );
+
+  
+  display D1(
+    r1[3:0],
+    HEX6
+  );
+
+  display D2(
+    r2[3:0],
+    HEX5
+  );
+
+  display D3(
+    r3[3:0],
+    HEX4
+  );
+  
+  //assign HEX0 = 7'b1111111;
+  
+  /*display D4(
+    pc,
+    HEX3
+  );*/
+
+ /* assign HEX3 = 7'b1111111;
+  assign HEX2 = 7'b1111111;
+  assign HEX1 = 7'b1111111;
+  assign HEX0 = 7'b1111111;*/
+endmodule
+
+module display(A, /*Clock,*/ saida);
+
+    input [3:0] A; // valor
+    //input Clock;
+
+    output reg [6:0] saida; // Saída do display de sete segmentos
+    always @(*) begin
+        case(A)
+        4'b0000: saida <= 7'b1000000; // 0
+        4'b0001: saida <= 7'b1111001; // 1
+        4'b0010: saida <= 7'b0100100; // 2
+        4'b0011: saida <= 7'b0110000; // 3
+        4'b0100: saida <= 7'b0011001; // 4
+        4'b0101: saida <= 7'b0010010; // 5
+        4'b0110: saida <= 7'b0000010; // 6
+        4'b0111: saida <= 7'b1111000; // 7
+        4'b1000: saida <= 7'b0000000; // 8
+        4'b1001: saida <= 7'b0010000; // 9
+		  4'b1010: saida <= 7'b0001000; // A
+		  4'b1011: saida <= 7'b0000011; // B
+		  4'b1100: saida <= 7'b1000110; // C
+		  4'b1101: saida <= 7'b0100001; // D
+		  4'b1110: saida <= 7'b0000110; // E
+		  4'b1111: saida <= 7'b0001110; // F
+
+        default: saida <= 7'b1111111; // Desativamos todos os segmentos
+        endcase
+    end
+endmodule

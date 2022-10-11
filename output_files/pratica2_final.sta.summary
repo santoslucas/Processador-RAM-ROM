@@ -1,0 +1,141 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'Clock_divider:divider|clock_out'
+Slack : -11.430
+TNS   : -1390.447
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -3.339
+TNS   : -101.405
+
+Type  : Slow Model Setup 'proc2:proc|Tstep_Q.T1'
+Slack : -1.198
+TNS   : -3.961
+
+Type  : Slow Model Setup 'proc2:proc|Tstep_Q.T4'
+Slack : -1.189
+TNS   : -4.500
+
+Type  : Slow Model Setup 'proc2:proc|regn:reg_IR|dado[10]'
+Slack : 0.494
+TNS   : 0.000
+
+Type  : Slow Model Hold 'proc2:proc|regn:reg_IR|dado[10]'
+Slack : -3.296
+TNS   : -16.692
+
+Type  : Slow Model Hold 'proc2:proc|Tstep_Q.T4'
+Slack : -2.891
+TNS   : -11.620
+
+Type  : Slow Model Hold 'proc2:proc|Tstep_Q.T1'
+Slack : -2.882
+TNS   : -10.838
+
+Type  : Slow Model Hold 'Clock_divider:divider|clock_out'
+Slack : -2.269
+TNS   : -16.992
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : 0.531
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'proc2:proc|regn:reg_IR|dado[10]'
+Slack : -0.887
+TNS   : -5.121
+
+Type  : Slow Model Removal 'proc2:proc|regn:reg_IR|dado[10]'
+Slack : -0.583
+TNS   : -3.022
+
+Type  : Slow Model Minimum Pulse Width 'Clock_divider:divider|clock_out'
+Slack : -2.000
+TNS   : -386.230
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -33.380
+
+Type  : Slow Model Minimum Pulse Width 'proc2:proc|Tstep_Q.T1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'proc2:proc|Tstep_Q.T4'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'proc2:proc|regn:reg_IR|dado[10]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'Clock_divider:divider|clock_out'
+Slack : -4.985
+TNS   : -572.072
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -0.952
+TNS   : -27.965
+
+Type  : Fast Model Setup 'proc2:proc|Tstep_Q.T4'
+Slack : -0.052
+TNS   : -0.052
+
+Type  : Fast Model Setup 'proc2:proc|Tstep_Q.T1'
+Slack : -0.036
+TNS   : -0.036
+
+Type  : Fast Model Setup 'proc2:proc|regn:reg_IR|dado[10]'
+Slack : 0.943
+TNS   : 0.000
+
+Type  : Fast Model Hold 'proc2:proc|regn:reg_IR|dado[10]'
+Slack : -1.829
+TNS   : -9.642
+
+Type  : Fast Model Hold 'proc2:proc|Tstep_Q.T1'
+Slack : -1.673
+TNS   : -6.358
+
+Type  : Fast Model Hold 'proc2:proc|Tstep_Q.T4'
+Slack : -1.657
+TNS   : -6.516
+
+Type  : Fast Model Hold 'Clock_divider:divider|clock_out'
+Slack : -1.459
+TNS   : -20.108
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'proc2:proc|regn:reg_IR|dado[10]'
+Slack : 0.050
+TNS   : 0.000
+
+Type  : Fast Model Removal 'proc2:proc|regn:reg_IR|dado[10]'
+Slack : -0.411
+TNS   : -2.467
+
+Type  : Fast Model Minimum Pulse Width 'Clock_divider:divider|clock_out'
+Slack : -2.000
+TNS   : -386.230
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -33.380
+
+Type  : Fast Model Minimum Pulse Width 'proc2:proc|Tstep_Q.T1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'proc2:proc|Tstep_Q.T4'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'proc2:proc|regn:reg_IR|dado[10]'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

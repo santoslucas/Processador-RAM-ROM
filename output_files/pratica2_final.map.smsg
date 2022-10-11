@@ -1,0 +1,13 @@
+Warning (10268): Verilog HDL information at proc2.v(291): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at proc2.v(11): object "r0" differs only in case from object "R0" in the same scope
+Info (10281): Verilog HDL Declaration information at proc2.v(11): object "r1" differs only in case from object "R1" in the same scope
+Info (10281): Verilog HDL Declaration information at proc2.v(11): object "r2" differs only in case from object "R2" in the same scope
+Info (10281): Verilog HDL Declaration information at proc2.v(11): object "r3" differs only in case from object "R3" in the same scope
+Info (10281): Verilog HDL Declaration information at proc2.v(11): object "r4" differs only in case from object "R4" in the same scope
+Info (10281): Verilog HDL Declaration information at proc2.v(11): object "r5" differs only in case from object "R5" in the same scope
+Info (10281): Verilog HDL Declaration information at proc2.v(11): object "r6" differs only in case from object "R6" in the same scope
+Info (10281): Verilog HDL Declaration information at proc2.v(11): object "pc" differs only in case from object "PC" in the same scope
+Info (10281): Verilog HDL Declaration information at proc2.v(11): object "g" differs only in case from object "G" in the same scope
+Info (10281): Verilog HDL Declaration information at proc2.v(9): object "DATA" differs only in case from object "data" in the same scope
+Info (10281): Verilog HDL Declaration information at proc2.v(11): object "addr" differs only in case from object "ADDR" in the same scope
+Info (10281): Verilog HDL Declaration information at proc2.v(11): object "dout" differs only in case from object "DOUT" in the same scope

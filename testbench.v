@@ -1,8 +1,9 @@
 module testbench;
 	reg Resetn, Clock, Run;
 	wire Done;
+	wire [15:0] r0, r1, r2, r3, r4, pc;
 
-    pratica2 proc(Resetn, Clock, Run, Done);
+    proc2 proc(Resetn, Clock, Run, Done, r0, r1, r2, r3, r4, pc);
 
    initial begin
         Clock = 1'b0;
@@ -12,7 +13,7 @@ module testbench;
     end
 
    initial begin
-		  $display("-------------------------------------- MV R1 <- 28 --------------------------------------");
+		  $display("-------------------------------------- MV --------------------------------------");
 		  Clock = ~Clock;
         #1
         Clock = ~Clock;
@@ -30,7 +31,7 @@ module testbench;
         Clock = ~Clock;
         #1
 		  
-		  $display("-------------------------------------- MV R3 <- 28 --------------------------------------");
+		  $display("-------------------------------------- MVT --------------------------------------");
 		  Clock = ~Clock;
         #1
         Clock = ~Clock;
@@ -49,7 +50,7 @@ module testbench;
         #1
 		  
 		  
-        $display("-------------------------------------- ADD R1 <- 56 --------------------------------------");
+        $display("-------------------------------------- ADD --------------------------------------");
         Clock = ~Clock;
         #1
         Clock = ~Clock;
@@ -75,7 +76,7 @@ module testbench;
         Clock = ~Clock;
         #1
 
-        $display("-------------------------------------- SUB R1 <- 28 --------------------------------------");
+        $display("-------------------------------------- SUB --------------------------------------");
         Clock = ~Clock;
         #1
         Clock = ~Clock;
@@ -96,12 +97,12 @@ module testbench;
         #1
         Clock = ~Clock;
         #1
-		  Clock = ~Clock;
-        #1
         Clock = ~Clock;
         #1
+        Clock = ~Clock;
+		  #1
         
-		  $display("-------------------------------------- SUB R1 <- 0 --------------------------------------");
+		  $display("-------------------------------------- ADD --------------------------------------");
 		  Clock = ~Clock;
         #1
         Clock = ~Clock;
@@ -126,202 +127,6 @@ module testbench;
         #1
         Clock = ~Clock;
         #1
-		  
-        $display("-------------------------------------- AND R3 <- 0 (R3&R1)--------------------------------------");
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;  
-        #1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-		  #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  
-		  $display("-------------------------------------- LOAD R4 <- 12 --------------------------------------");
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  
-		  $display("-------------------------------------- MV R6 <- 7 --------------------------------------");
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  $display("-------------------------------------- STORE 12(R4) EM mem[7]--------------------------------------");
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  
-		  $display("-------------------------------------- LOAD R3 <- 12 --------------------------------------");
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  
-		  $display("-------------------------------------- SUB R6 <- 1 --------------------------------------");
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  
-		  $display("-------------------------------------- Brench -> l1 --------------------------------------");
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  
-		  $display("-------------------------------------- R3 <- R3 << 1 --------------------------------------");
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  Clock = ~Clock;
-        #1
-        Clock = ~Clock;
-        #1
-		  
 
         Clock = ~Clock;
         #1
