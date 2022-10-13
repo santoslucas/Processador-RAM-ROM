@@ -11,23 +11,23 @@ module proc2 (Resetn, Clock, Run, Done, _r0, _r1, _r2, _r3, _r4, _pc);
 	wire [15:0] r0, r1, r2, r3, r4, r5, r6, a, g, IR, pc, result, addr, dout, barrel_out;
 	wire [2:0] III, rX, rY, b_type;
 	wire Imm, Imm_BShifter, w, mvt_or_b, cond, zero, f;
-	wire [1:0] SS;
+	wire [1:0] SS; // operacoes de SHIFT/ROTATE
 	wire [6:0] R_in;
 
 	reg A_in, rX_in, G_in, IR_in, ADDR_in, DOUT_in, W_D, pc_incr, pc_in, F_in;
-	reg [1:0] ALU_op; //ALU_op: add->00, sub->01, and->10
+	reg [1:0] ALU_op; //ALU_op: add->00, sub->01, and->10, barrelShifter->11
 	reg [15:0] BusWires;
-	reg [2:0] Tstep_D, Tstep_Q;
+	reg [2:0] Tstep_D, Tstep_Q; //Estagios
 	reg [3:0] Select;
 
 	assign III = IR[15:13];
-	assign Imm = IR[12];
+	assign Imm = IR[12]; // operacoes com/sem imediato
 	assign rX = IR[11:9];
 	assign rY = IR[2:0];
 	assign mvt_or_b = IR[12];
-	assign b_type = IR[11:9];
-	assign SS = IR[6:5];
-	assign Imm_BShifter = IR[7];
+	assign b_type = IR[11:9]; // tipo de desvio
+	assign SS = IR[6:5]; // operacoes de SHIFT/ROTATE
+	assign Imm_BShifter = IR[7]; // desvio com/sem imediato
 	
 	assign _r0 = r0;
 	assign _r1 = r1;
@@ -37,10 +37,10 @@ module proc2 (Resetn, Clock, Run, Done, _r0, _r1, _r2, _r3, _r4, _pc);
 	assign _pc = pc;
 	
 	dec3to8 decX (rX_in, rX, R_in); // produce r0 - r7 register enables
-	ram memDados (addr, Clock, dout, w, DATA);
-	rom memInst ((pc-1), Clock, DIN);
+	ram memDados (addr, Clock, dout, w, DATA); //memoria de dados
+	rom memInst ((pc-1), Clock, DIN); // memoria de instrucoes
 
-	parameter T0 = 3'b000, T1 = 3'b001, T2 = 3'b010, T3 = 3'b011, T4 = 3'b100, T5 = 3'b101;
+	parameter T0 = 3'b000, T1 = 3'b001, T2 = 3'b010, T3 = 3'b011, T4 = 3'b100, T5 = 3'b101; // estagios
 	
 	initial begin
 		Tstep_D = T0;
@@ -97,16 +97,15 @@ module proc2 (Resetn, Clock, Run, Done, _r0, _r1, _r2, _r3, _r4, _pc);
 	// control FSM outputs
 	always @(*) begin
 		IR_in = 0; rX_in = 1'b0; Done = 1'b0; A_in = 1'b0; G_in = 1'b0; ADDR_in = 1'b0; DOUT_in = 1'b0; 
-		W_D = 1'b0; pc_incr = 1'b0; pc_in = 1'b0; F_in = 1'b0; //default values for variables
-
+		W_D = 1'b0; pc_incr = 1'b0; pc_in = 1'b0; F_in = 1'b0; // valores iniciais de cada variavel
 		case (Tstep_Q)
 			T0: begin
 				Select = PC;
 				ADDR_in = 1'b1;
-				pc_incr = 1'b1;
+				pc_incr = 1'b1; // incrementa PC
 			end
 			T1: begin
-				// WAIT
+				// ESPERA
 			end
 
 			T2: begin// store DIN into IR
@@ -239,13 +238,13 @@ module proc2 (Resetn, Clock, Run, Done, _r0, _r1, _r2, _r3, _r4, _pc);
 				mvt_b: begin
 					if(!mvt_or_b) begin // branch instruction 
 						Select = G;
-						pc_in = 1'b1;
+						pc_in = 1'b1; // enable PC
 						Done = 1'b1;
 					end
 				end
 				shift_rot: begin
 						Select = G; 
-						rX_in = 1'b1;
+						rX_in = 1'b1; // enable rX
 						Done = 1'b1;
 				end
 				default: ;
@@ -273,17 +272,23 @@ module proc2 (Resetn, Clock, Run, Done, _r0, _r1, _r2, _r3, _r4, _pc);
 	//PC
 	programCounter PC_1 (BusWires, Resetn, pc_incr, pc_in, Clock, pc);
 	
+	//OUTROS REGISTRADORES
 	regn reg_G (result,   Resetn, G_in,    Clock, g );
 	regn reg_A (BusWires, Resetn, A_in,    Clock, a );
 	regn reg_IR(DIN,      Resetn, IR_in,   Clock, IR);
 	W wren (W_D, Clock, w);
 	
-	//COMUNICAÃ‡ÃƒO COM A MEMÃ“RIA
+	//COMUNICACAO COM A MEMORIA
 	regn ADDR(BusWires,   Resetn, ADDR_in, Clock, addr);
 	regn DOUT(BusWires,   Resetn, DOUT_in, Clock, dout);
-
+	
+	// ULA
 	ULAn ula (a, BusWires, barrel_out, ALU_op, result, zero);
+	
+	//REGISTRADOR F
 	F F_1 (F_in, zero, Clock, f);
+	
+	// Barrel Shifter
 	barrel barrelShifter(SS, BusWires[3:0], a, barrel_out);
 
 	// MULTIPLEXADOR: define the internal processor bus

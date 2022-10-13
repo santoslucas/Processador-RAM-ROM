@@ -1,4 +1,4 @@
-Warning (10268): Verilog HDL information at proc2.v(291): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at proc2.v(296): always construct contains both blocking and non-blocking assignments
 Info (10281): Verilog HDL Declaration information at proc2.v(11): object "r0" differs only in case from object "R0" in the same scope
 Info (10281): Verilog HDL Declaration information at proc2.v(11): object "r1" differs only in case from object "R1" in the same scope
 Info (10281): Verilog HDL Declaration information at proc2.v(11): object "r2" differs only in case from object "R2" in the same scope

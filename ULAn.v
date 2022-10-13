@@ -10,20 +10,20 @@ module ULAn (in_1, in_2, barrel_out, OPcode, result, zero);
 		else if(OPcode == 2'b01)// sub
 			result = (in_1 - in_2);
 		else if (OPcode == 2'b10) begin // and
-			if (in_1 & in_2) begin
+			if (in_1 & in_2) begin // and
 				result = 16'b0000000000000001;
 			end
 			else begin
 				result = 16'b0000000000000000;
 			end
 		end
-		else if (OPcode == 2'b11) begin
+		else if (OPcode == 2'b11) begin // saida do barrel shifter
 			result = barrel_out;
 		end
 	end
 	
 	always@(*) begin
-		if(result == 0) begin
+		if(result == 0) begin // zero = 1, se o resultado da operacao for 0
 			zero = 1'b1;
 		end
 		else begin

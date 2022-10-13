@@ -1,5 +1,5 @@
 EDA Netlist Writer report for pratica2_final
-Tue Oct 11 18:47:41 2022
+Thu Oct 13 20:20:28 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Oct 11 18:47:41 2022 ;
+; EDA Netlist Writer Status ; Successful - Thu Oct 13 20:20:28 2022 ;
 ; Revision Name             ; pratica2_final                        ;
 ; Top-level Entity Name     ; pratica2_final                        ;
 ; Family                    ; Cyclone II                            ;
@@ -66,16 +66,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                    ;
-+-----------------------------------------------------------------------------------------------+
-; Generated Files                                                                               ;
-+-----------------------------------------------------------------------------------------------+
-; C:/ProgramasCEFET/quartus/AOC II/pratica2_final/simulation/modelsim/pratica2_final.vo         ;
-; C:/ProgramasCEFET/quartus/AOC II/pratica2_final/simulation/modelsim/pratica2_final_fast.vo    ;
-; C:/ProgramasCEFET/quartus/AOC II/pratica2_final/simulation/modelsim/pratica2_final_v.sdo      ;
-; C:/ProgramasCEFET/quartus/AOC II/pratica2_final/simulation/modelsim/pratica2_final_v_fast.sdo ;
-+-----------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                   ;
++--------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                              ;
++--------------------------------------------------------------------------------------------------------------+
+; C:/ProgramasCEFET/quartus/AOC II/LaraGama_LucasSantos_pratica2/simulation/modelsim/pratica2_final.vo         ;
+; C:/ProgramasCEFET/quartus/AOC II/LaraGama_LucasSantos_pratica2/simulation/modelsim/pratica2_final_fast.vo    ;
+; C:/ProgramasCEFET/quartus/AOC II/LaraGama_LucasSantos_pratica2/simulation/modelsim/pratica2_final_v.sdo      ;
+; C:/ProgramasCEFET/quartus/AOC II/LaraGama_LucasSantos_pratica2/simulation/modelsim/pratica2_final_v_fast.sdo ;
++--------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Oct 11 18:47:40 2022
+    Info: Processing started: Thu Oct 13 20:20:27 2022
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off pratica2_final -c pratica2_final
-Info (204026): Generated files "pratica2_final.vo", "pratica2_final_fast.vo", "pratica2_final_v.sdo" and "pratica2_final_v_fast.sdo" in directory "C:/ProgramasCEFET/quartus/AOC II/pratica2_final/simulation/modelsim/" for EDA simulation tool
+Info (204026): Generated files "pratica2_final.vo", "pratica2_final_fast.vo", "pratica2_final_v.sdo" and "pratica2_final_v_fast.sdo" in directory "C:/ProgramasCEFET/quartus/AOC II/LaraGama_LucasSantos_pratica2/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4535 megabytes
-    Info: Processing ended: Tue Oct 11 18:47:41 2022
+    Info: Peak virtual memory: 4540 megabytes
+    Info: Processing ended: Thu Oct 13 20:20:28 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

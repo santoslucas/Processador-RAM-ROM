@@ -8,7 +8,7 @@ module dec3to8(E, W, Y);
 		if (E == 0)
 			Y = 7'b00000000;
 	else
-		case (W)
+		case (W) // habilitadores de cada registrador
 			3'b000: Y = 7'b0000001;
 			3'b001: Y = 7'b0000010;
 			3'b010: Y = 7'b0000100;

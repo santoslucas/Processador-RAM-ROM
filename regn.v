@@ -4,16 +4,16 @@ module regn (BusWires, Resetn, enable, Clock, dado);
 	output reg [15:0] dado;
 	
 	initial begin
-		dado <= 16'b0;
+		dado <= 16'b0; //dado zerado
 	end
 
 	// Escrita
 	always @(posedge Clock, negedge Resetn) begin
-		if(!Resetn) begin
-			dado <= 16'b0;
+		if(!Resetn) begin 
+			dado <= 16'b0; //reset
 		end
-		else if(enable) begin
-			dado <= BusWires;
+		else if(enable) begin //escreve novo dado
+			dado <= BusWires; 
 		end
 	end
 endmodule

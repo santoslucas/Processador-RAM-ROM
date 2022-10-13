@@ -3,7 +3,7 @@ module W (W_D, Clock, w);
 	output reg w;
 
 	always @(posedge Clock) begin 
-		if(W_D) begin //W_D habilita escritas na memÃ³ria
+		if(W_D) begin //W_D habilita escritas na memoria
 			w = 1'b1;
 		end
 		else begin

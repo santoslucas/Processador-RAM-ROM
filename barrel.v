@@ -7,13 +7,13 @@ module barrel (shift_type, shift, data_in, data_out);
 	parameter lsl = 2'b00, lsr = 2'b01, asr = 2'b10, ror = 2'b11;
 	
 	always @(*) begin
-		if (shift_type == lsl)
+		if (shift_type == lsl) // shift left
 			data_out = data_in << shift;
-		else if (shift_type == lsr)
+		else if (shift_type == lsr) // shift right
 			data_out = data_in >> shift;
-		else if (shift_type == asr)
+		else if (shift_type == asr) // shift right aritmetico
 			data_out = {{16{data_in[15]}},data_in} >> shift; // sign extend
-		else // ror
+		else // rotate right
 			data_out = (data_in >> shift) | (data_in << (16 - shift));
 	end
 endmodule

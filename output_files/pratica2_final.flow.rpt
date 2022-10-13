@@ -1,5 +1,5 @@
 Flow report for pratica2_final
-Tue Oct 11 18:47:41 2022
+Thu Oct 13 20:20:28 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Oct 11 18:47:41 2022           ;
+; Flow Status                        ; Successful - Thu Oct 13 20:20:28 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; pratica2_final                                  ;
 ; Top-level Entity Name              ; pratica2_final                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/11/2022 18:47:21 ;
+; Start date & time ; 10/13/2022 20:20:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pratica2_final      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 123598315120043.166552484110096       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 123598315120043.166570320513692       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                             ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
@@ -107,12 +107,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4610 MB             ; 00:00:04                           ;
-; Fitter                    ; 00:00:09     ; 1.0                     ; 4887 MB             ; 00:00:09                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 4609 MB             ; 00:00:04                           ;
+; Fitter                    ; 00:00:10     ; 1.0                     ; 4883 MB             ; 00:00:11                           ;
 ; Assembler                 ; 00:00:02     ; 1.0                     ; 4551 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4561 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:16     ; --                      ; --                  ; 00:00:17                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4561 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4528 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:19                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

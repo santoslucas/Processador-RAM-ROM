@@ -13,7 +13,7 @@ module pratica2_final (
     output wire [7:0] LEDG
 );
   wire Clock;
-  Clock_divider #(50000000) divider (CLOCK_50, Clock);
+  Clock_divider #(50000000) divider (CLOCK_50, Clock); //delay clock
 
   wire [15:0] r0, r1, r2, r3, r4, pc;
   

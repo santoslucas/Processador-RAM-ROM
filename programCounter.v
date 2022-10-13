@@ -7,17 +7,17 @@ module programCounter (BusWires, Resetn, pc_incr, pc_in, Clock, pc);
 		pc = 1'b0;
 	end
 
-	always @(posedge Clock) begin   //apenas na borda de subida do clock o valor de PC Ã© atualizado
+	always @(posedge Clock) begin   //apenas na borda de subida do clock o valor de PC eh atualizado
 		if(Resetn) begin
-			if(pc_in) begin //pc_in Ã© usado para fazer desvios (endereÃ§o Ã© armazenado em pc)
+			if(pc_in) begin // operacoes de desvio
             	pc = (BusWires);
         	end
 			else if(pc_incr) begin
-				pc = pc + 1; //Ã‰ ASSIM QUE PEGA A PÅ”OXIMA INSTRUÃ‡ÃƒO?????????????
+				pc = pc + 1; // incrementa PC
 			end	
 		end
 		else begin
-			pc = 1'b0;
+			pc = 1'b0; // reseta PC
 		end	
 	end
 endmodule
